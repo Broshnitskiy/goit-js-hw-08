@@ -10,9 +10,9 @@ formRef.addEventListener("input", throttle(onTextInput, 500));
 formRef.addEventListener('submit', event => {
     event.preventDefault();
     localStorage.removeItem("feedback-form-state");
-
-    const formData = new FormData(formRef);
-    formData.forEach((value, name) => console.log(name, value));
+    console.log(inputTextForm);
+    // const formData = new FormData(formRef);
+    // formData.forEach((value, name) => console.log(name, value));
     
     event.currentTarget.reset();
 });
