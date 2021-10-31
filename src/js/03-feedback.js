@@ -29,7 +29,8 @@ function initForm() {
     if (staticTextForm) {
         staticTextForm = JSON.parse(staticTextForm);
         Object.entries(staticTextForm).forEach(([name, value]) => {
-        formRef.elements[name].value = value;
+            formRef.elements[name].value = value;
+            inputTextForm[name] = value;
         });
     }
 }
