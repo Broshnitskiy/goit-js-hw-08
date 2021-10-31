@@ -2,7 +2,7 @@ import throttle from "lodash.throttle";
 
 const formRef = document.querySelector(".feedback-form");
 
-const inputTextForm = {};
+let inputTextForm = {};
 initForm();
 
 formRef.addEventListener("input", throttle(onTextInput, 500));
@@ -15,6 +15,7 @@ formRef.addEventListener('submit', event => {
     // formData.forEach((value, name) => console.log(name, value));
     
     event.currentTarget.reset();
+    inputTextForm = {};
 });
 
 function onTextInput(event) {
